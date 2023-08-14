@@ -1,0 +1,187 @@
+.MatKaTable {
+    /* border: 7px solid lawngreen; */
+    display: flex;
+    margin-top: 2em;
+    max-width: 100%;
+    overflow-x: scroll;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  table{
+    width: 80%;
+    background-color: aquamarine;
+  }
+  
+  
+  .paginator {
+    width: 100%;
+    /* background-color: rgb(41, 39, 39);
+    color: #fff; */
+    font-size: large;
+  }
+  
+  th {
+    background-color: red;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  
+  td {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .SearchbarandAdd_but {
+    display: flex;
+    /* border :2px solid red; */
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  
+  .searchbar {
+    border: 5px solid #007bff;
+    border-radius: 10px;
+    font-size: larger;
+  }
+  
+  .searchbar:hover {
+    border: 4px solid blue;
+  }
+  
+  /*yaaaaaaaaad  rkahan a2 bar arha hai table*/
+  table,
+  th,
+  td {
+    border: 2px solid rgb(8, 8, 169);
+    ;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(242, 231, 231);
+    /* width: 80%; */
+  }
+  
+  .buts {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+  
+  .popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 4px solid rgb(0, 0, 64);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    border: 4px solid rgb(0, 0, 64);
+    border-radius: 3px;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  button{
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .addBut {
+    animation: 2s ease 1s infinite alternate addButAnime;
+  }
+  
+  
+  @keyframes addButAnime {
+    from {
+      font-size: medium;
+    }
+  
+    to {
+      font-size: large;
+      background-color: rgb(0, 0, 64);
+    }
+  }
+  .AddEditBut{
+    width: 100%;
+  }
+  .AddEditBox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap:4px;
+    padding: 2px 2px;
+  }
+  
+  .SaveAndClose,
+  .UpdateCloseBut,
+  .AddEditBut {
+    animation: 2s ease 1s infinite alternate AddEditButAnime;
+  }
+  
+  @keyframes AddEditButAnime {
+    from {
+      background-color: #007bff;
+    }
+  
+    to {
+      background-color: rgb(0, 0, 64);
+    }
+  }
+  
+  
+  table,th{
+    width: 80%;
+    background-color: rgba(30, 23, 23, 0.125);
+    background-color: brown;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  td{
+    background-color: chocolate;
+    font-size: larger;
+  }
+  .NOTE{
+    color: white;
+  }

@@ -1,0 +1,18 @@
+ .nav {
+    margin-left: 5rem;
+    display: flex;
+    justify-content: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(7, 7, 108);
+    animation: 2s ease 1s infinite alternate AddEditButAnime;
+}
+@keyframes AddEditButAnime {
+    from {
+        color: #007bff;
+    }
+    to {
+        color: rgb(0, 0, 64);
+    }
+}
+/*                                   isshhhhhhhhhhhhhhhhhhhh ssssss           Tart                 */

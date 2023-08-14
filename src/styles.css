@@ -1,0 +1,38 @@
+/*You can add global styles to this file, and also import other style files */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+  width: 100vw;
+  display: flex; 
+  justify-content: center;
+}
+
+  app-root{
+    width: 60%;
+    display: block;
+    position: relative;
+  } */
+
+
+  /*                                   isshhhhhhhhhhhhhhhhhhhh ssssss           Tart                 */
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    /* display: flex;
+    flex-direction: column;
+    width: 100vw; */
+    justify-content: center;
+  }
+
+  app-root{
+    /* width: 72.5%; */
+  }

@@ -1,0 +1,147 @@
+<!-- ******************************************************************* 
+            FORM FOR ADDING  A NEW STUDENT          
+*********************************************************************  -->
+<div class="popup-overlay" [style.display]="isPopupOpen ? 'block' : 'none'">
+  <div class="popup-container">
+    <h2>ENTER STUDENT CREDENTIALS</h2>
+    <h3 class="UpdateCloseBut  NOTE">NOTE:EDIT ROLL NUMBER TO ADD STUDENT AT A SPECIFIC ROLL.NO!</h3>
+    <div class="form-group">
+      <label for="ROLL_NO">ROLL NO:</label>
+      <input type="text" class="forminput"  class="ROLL_NO" class="add_inp" [(ngModel)]="input1">
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="forminput" class="name" class="add_inp" [(ngModel)]="input2">
+    </div>
+    <div class="form-group">
+      <label for="field">Field:</label>
+      <input type="text" class="forminput" class="field" class="add_inp" [(ngModel)]="input3">
+    </div>
+    <div class="form-group">
+      <label for="">Nationality:</label>
+      <input type="text" class="forminput" class="nationality" class="add_inp" [(ngModel)]="input4">
+    </div>
+    <div class="form-group">
+      <label for="batch">Batch:</label>
+      <input type="text" class="forminput" class="batch" class="add_inp" [(ngModel)]="input5">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="forminput" class="email" class="add_inp" [(ngModel)]="input6">
+    </div>
+
+    <div class="form-actions">
+      <button class="SaveAndClose" (click)="Add_Student()">Save</button>
+      <button class="SaveAndClose" (click)="closePopup()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- **************************************************************************** >>>>      
+                  FORM FOR UPDATING  A STUDENT'S INFO          
+*******************************************************************************  -->
+<div class="popup-overlay" [style.display]="isPopupUpdateOpen ? 'block' : 'none'">
+  <div class="popup-container">
+    <h2>EDIT STUDENT CREDENTIALS</h2>
+    <div class="form-group">
+      <label for="ROLL_NO">ROLL NO:</label>
+      <input type="text" class="forminput" class="ROLL_NO"  class="editinp"[(ngModel)]="input1">
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="forminput" class="name" class="editinp" [(ngModel)]="input2">
+    </div>
+    <div class="form-group">
+      <label for="field">Field:</label>
+      <input type="text" class="forminput" class="field" class="editinp" [(ngModel)]="input3">
+    </div>
+    <div class="form-group">
+      <label for="">Nationality:</label>
+      <input type="text" class="forminput" class="nationality" class="editinp" [(ngModel)]="input4">
+    </div>
+    <div class="form-group">
+      <label for="batch">Batch:</label>
+      <input type="text" class="forminput" class="batch" class="editinp" [(ngModel)]="input5">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="forminput" class="email" class="editinp" [(ngModel)]="input6" required>
+    </div>
+    <div class="form-actions">
+      <button class="UpdateCloseBut" (click)="UpdateStudentData()">UPDATE</button>
+      <button class="UpdateCloseBut" (click)="ClosePopupUpdate()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ********************************************************************************************************* 
+            TABLES      FOR      DISPLAYING       STUDENT            DATA 
+ ************************************************************************************************************** -->
+<div class="theme">                   
+  <mat-slide-toggle (change)="theme(($event.checked))" class="theme" [color]="slider">THEME SWITCH 
+</mat-slide-toggle>
+</div>
+  <div class="SearchbarandAdd_but">
+    <mat-form-field class="searchbar">
+      <input class="searchbar" matInput placeholder="SEARCH BAR" [(ngModel)]="searchQuery" (input)="applyFilter()">
+    </mat-form-field>
+    <button class="addBut" (click)="OnAdd()">CLICK TO ADD STUDENT</button>
+  </div>           
+  <div class="onlyTable">                
+    <mat-table class="classTable" mat-table [dataSource]="dataSource" matSort
+      (matSortChange)="announceSortChange($event)">
+      <ng-container matColumnDef="ROLL_NO">
+        <th class="thead" mat-header-cell *matHeaderCellDef mat-sort-header [style.BackgroundColor]="colcolor">ROLL-NO
+        </th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor" [style.textAlign]="'center'">
+          {{element.ROLL_NO}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="NAME">
+        <th class="thead" mat-header-cell *matHeaderCellDef mat-sort-header [style.BackgroundColor]="colcolor">NAME</th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor">{{element.NAME}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="FIELD">
+        <th class="thead" mat-header-cell *matHeaderCellDef mat-sort-header [style.BackgroundColor]="colcolor">FIELD
+        </th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor">{{element.FIELD}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="NATIONALITY">
+        <th class="thead" mat-header-cell *matHeaderCellDef mat-sort-header [style.BackgroundColor]="colcolor">
+          NATIONALITY</th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor">{{element.NATIONALITY}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="BATCH">
+        <th class="thead" mat-header-cell *matHeaderCellDef mat-sort-header [style.BackgroundColor]="colcolor">BATCH
+        </th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor">{{element.BATCH}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="EMAIL">
+        <th class="thead" mat-header-cell *matHeaderCellDef [style.BackgroundColor]="colcolor">EMAIL</th>
+        <td mat-cell *matCellDef="let element" [style.BackgroundColor]="rowcolor">{{element.EMAIL}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="OPTIONS">
+        <th class="thead" mat-header-cell *matHeaderCellDef [style.BackgroundColor]="colcolor">OPTIONS</th>
+        <td mat-cell *matCellDef="let item" [style.BackgroundColor]="rowcolor">
+          <div class="AddEditBox">
+            <button class="AddEditBut" mat-button (click)="onEdit(item)">Edit</button>
+            <button class="AddEditBut" mat-button (click)="onDelete(item.ID)">Delete</button>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+    </mat-table>
+    <div class="pagi">
+      <mat-paginator #paginator [length]="100" [pageSize]="20" aria-label="select page"
+      showFirstLastButtons [style.color]="paginator_colour">
+    </mat-paginator>
+    </div>
+
+  <!-- </div>               abhi kia hai  -->      
+<!-- </div> -->

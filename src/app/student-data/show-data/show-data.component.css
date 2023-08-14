@@ -1,0 +1,163 @@
+/* 
+.MatKaTable{
+  border: 3px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.onlyTable{
+  border: 7px solid purple;
+  align-items: center;
+}*/
+mat-table{
+  border-collapse: collapse;
+  color: white;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  background-color: rgba(145, 145, 145, 0.347);
+}
+.searchbar{
+  color:rgb(10, 10, 67);
+  font-size: larger;
+}
+.thead{
+  color: black;
+} 
+
+
+/******             Form css                        ***********/
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  border: 4px solid rgb(0, 0, 64);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 4px solid rgb(0, 0, 64);
+  border-radius: 3px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.form-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+button{
+  padding: 8px 16px;
+  background-color: #0f59a8;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.addBut {
+  animation: 2s ease 2s infinite alternate addButAnime;
+}
+@keyframes addButAnime {
+  from {
+    font-size: small  ;
+  }
+
+  to {
+    background-color: rgb(0, 0, 64);
+  }
+}
+
+.SearchbarandAdd_but{
+  display: flex;
+  justify-content:space-between;
+}
+.AddEditBox{
+  display: flex;
+}
+.AddEditBut,button{
+  color:white;
+  font-weight: bold;
+  animation: 2s ease 2s infinite alternate addButAnime;
+}
+
+
+@keyframes addButAnime {
+  from{
+    background-color: rgb(5, 134, 226);
+
+  }
+  to {
+    background-color: rgb(20, 20, 157);
+  }
+}
+.theme{
+  animation: none;
+  }
+
+/*                                   isshhhhhhhhhhhhhhhhhhhh ssssss           Tart                 */
+
+mat-table{
+  /* display: none; */
+  margin-top: 1rem;
+  max-width:  100vw; 
+}
+.pagi{
+  margin-top: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: left;
+  width: fit-content;
+  background-color:rgb(127, 129, 130);
+}
+.pagi:hover{
+  box-shadow: 0px 0px 12px 6px rgb(2, 2, 2);  
+}
+
+.SearchbarandAdd_but{
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme{
+    background-color:rgb(153, 153, 153);
+    text-align: left; 
+    width: fit-content;
+    border-radius: 2rem;
+}
+body{
+  background-color: white;
+}
